@@ -1,0 +1,28 @@
+{
+  "name": "gemh-mcp-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Model Context Protocol (MCP) server for the Greek Business Registry (ΓΕΜΗ) Open Data API.",
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "bin": {
+    "gemh-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "node --enable-source-maps --watch dist/index.js",
+    "start": "node --enable-source-maps dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "tools:list": "node --enable-source-maps dist/toolsList.js",
+    "fetch:spec": "node scripts/fetch-openapi.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.2",
+    "undici": "^6.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
