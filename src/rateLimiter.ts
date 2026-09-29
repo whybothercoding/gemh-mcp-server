@@ -11,7 +11,14 @@ export class RateLimiter {
   constructor(
     private readonly maxRequests: number,
     private readonly windowMs: number,
-  ) {}
+  ) {
+    if (!Number.isSafeInteger(maxRequests) || maxRequests <= 0) {
+      throw new RangeError('maxRequests must be a positive safe integer');
+    }
+    if (!Number.isFinite(windowMs) || windowMs <= 0) {
+      throw new RangeError('windowMs must be a positive finite number');
+    }
+  }
 
   async acquire(): Promise<void> {
     for (;;) {

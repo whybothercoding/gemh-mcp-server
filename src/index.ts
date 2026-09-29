@@ -12,6 +12,9 @@ const baseUrl = process.env.GEMH_BASE_URL;
 const maxRequestsPerMinute = process.env.GEMH_MAX_REQUESTS_PER_MINUTE
   ? Number(process.env.GEMH_MAX_REQUESTS_PER_MINUTE)
   : undefined;
+if (maxRequestsPerMinute !== undefined && (!Number.isSafeInteger(maxRequestsPerMinute) || maxRequestsPerMinute <= 0)) {
+  throw new Error('Invalid GEMH_MAX_REQUESTS_PER_MINUTE: expected a positive integer.');
+}
 
 const server = await createGemhMcpServer({ apiKey, baseUrl, maxRequestsPerMinute });
 
