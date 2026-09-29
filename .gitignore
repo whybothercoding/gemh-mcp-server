@@ -4,5 +4,10 @@ dist/
 .DS_Store
 .env
 .cache/
-CLAUDE.md
-AGENTS.md
+/.claude/
+/.agents/
+/.gemini/
+/.mcp.json
+/CLAUDE.md
+/AGENTS.md
+/GEMINI.md
