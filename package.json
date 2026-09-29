@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.2",
-    "undici": "^6.21.0"
+    "undici": "^6.29.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
