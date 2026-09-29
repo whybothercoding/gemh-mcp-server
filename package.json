@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Model Context Protocol (MCP) server for the Greek Business Registry (ΓΕΜΗ) Open Data API.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "dist/index.js",
   "bin": {
     "gemh-mcp": "dist/index.js"
