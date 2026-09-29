@@ -1,13 +1,19 @@
+# Dependencies and build output
 node_modules/
 dist/
+
+# Local logs, caches, and OS files
 *.log
-.DS_Store
-.env
 .cache/
-/.claude/
-/.agents/
-/.gemini/
+.DS_Store
+
+# Secrets and local service configuration
+.env
 /.mcp.json
+
+# Client-specific context; keep repository guidance trackable
+/.codex/
+/.agents/
+/.claude/
 /CLAUDE.md
-/AGENTS.md
 /GEMINI.md
